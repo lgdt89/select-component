@@ -3,19 +3,21 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  
+
 }
 
-.checkbox-container{
-      margin-top: 10%;
-  }
-  .custom-checkbox:checked{
-    accent-color: gray;
-  }
-  input[type="checkbox"]{
-    background-color: gray;
-  }
+.checkbox-container {
+  margin-top: 10%;
+}
 
-  span{
-    margin-top: 5%;
-  }
+.custom-checkbox:checked {
+  accent-color: gray;
+}
+
+input[type="checkbox"] {
+  background-color: gray;
+}
+
+span {
+  margin-top: 5%;
+}
