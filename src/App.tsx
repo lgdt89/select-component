@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -27,14 +26,14 @@ function App() {
 
     setSelectAll(!selectAll);
   };
-  console.log("selectedCountries",selectedCountries)
+  console.log("selectedCountries", selectedCountries);
   return (
     <div className="App">
       <div className="checkbox-container">
         <h2>Countrys Checkbox:</h2>
         <label>
           <input
-            className="custom-checkbox" 
+            className="custom-checkbox"
             type="checkbox"
             checked={selectAll}
             onChange={handleSelectAllToggle}
@@ -46,7 +45,7 @@ function App() {
           <div key={country}>
             <label>
               <input
-              className="custom-checkbox" 
+                className="custom-checkbox"
                 type="checkbox"
                 checked={selectedCountries.includes(country)}
                 onChange={() => handleCountryToggle(country)}
@@ -56,7 +55,7 @@ function App() {
           </div>
         ))}
       </div>
-      <span>Option(s) Selected: { selectedCountries.join(',')}</span>
+      <span>Option(s) Selected: {selectedCountries.join(",")}</span>
     </div>
   );
 }
