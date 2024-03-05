@@ -18,7 +18,7 @@ function App() {
     setSelectedCountries(updatedCountries);
     setSelectAll(updatedCountries.length === countries.length);
   };
-  const handleSelectAllToggle = () => {
+  const handleSelectAllToggle: () => void = () => {
     if (selectAll) {
       setSelectedCountries([]);
     } else {
@@ -27,12 +27,14 @@ function App() {
 
     setSelectAll(!selectAll);
   };
+  console.log("selectedCountries",selectedCountries)
   return (
     <div className="App">
       <div className="checkbox-container">
         <h2>Countrys Checkbox:</h2>
         <label>
           <input
+            className="custom-checkbox" 
             type="checkbox"
             checked={selectAll}
             onChange={handleSelectAllToggle}
@@ -54,6 +56,7 @@ function App() {
           </div>
         ))}
       </div>
+      <span>Option(s) Selected: { selectedCountries.join(',')}</span>
     </div>
   );
 }
